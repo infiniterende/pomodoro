@@ -53,6 +53,16 @@ const pulseDot = keyframes`
 }
 `
 const TimeContainer = styled.div`
+&:after {
+  content: '';
+  position:absolute;
+  background-color: #01a4e9;
+  width: 150%;
+  height: 150%;
+  border-radius: 50%;
+  z-index: -1;
+  animation: ${pulseRing} 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
     background-color: #74B8BE;
     font-size: 36px;
     padding: 10px;
@@ -68,8 +78,6 @@ const TimeContainer = styled.div`
     padding: 50px;
       box-shadow: 0 0 8px rgba(0,0,0,.3);
       animation: ${pulseDot} 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) -.4s infinite;
-    }
-  }
   
 `;
 
